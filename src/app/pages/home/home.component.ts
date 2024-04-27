@@ -19,25 +19,7 @@ export class HomeComponent implements OnInit {
 
   newTaskCtrl = new FormControl('', { nonNullable: true, validators: [Validators.required] });
 
-  taskList = signal<Task[]>([
-    // {
-    //   id: Date.now(),
-    //   title: 'Formatear PC',
-    //   completed: false
-    // }, {
-    //   id: Date.now(),
-    //   title: 'Eliminar Bloatware',
-    //   completed: false
-    // }, {
-    //   id: Date.now(),
-    //   title: 'Instalar Office',
-    //   completed: false
-    // }, {
-    //   id: Date.now(),
-    //   title: 'Instalar Docker',
-    //   completed: false
-    // }
-  ]);
+  taskList = signal<Task[]>([ ]);
 
   taskByFilter = computed(() => {
     const filter = this.filter();
